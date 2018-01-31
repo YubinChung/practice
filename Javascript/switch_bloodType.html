@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Blood type - switch </title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+	<script>
+		// switch
+		var blood = window.prompt('What is your blood type?');
+		var result = "";
+		switch (blood){
+			case ("A"):
+				result = "A";
+			break;
+			case ("B"):
+				result = "B";
+			break;
+			case ("O"):
+				result = "O";
+			break;
+			case ("AB"):
+				result = "AB";
+			break;
+			
+			default: result = "wrong";
+		}
+		document.write(result + " type blood ");
+		
+	</script>
+	</body>
+</html>
