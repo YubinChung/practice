@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PHP - Registration</title>
+		<link rel="stylesheet" href="../css/common.css">
+	</head>
+	<body>
+		<div class="wrap q1_wrap">
+			<h1>Music Lesson Registration</h1>
+			<div>
+				<form action="regist.php" method="post">
+					<table>
+						<tbody>
+							<tr>
+								<th><label for="s_name">Student Name</label></th>
+								<td><input type="text" required="required" name="s_name" id="s_name" placeholder="Enter name" pattern="[^0-9]*$" title="It must not have number"></td>
+								<th>Date of Birth</th>
+								<td>
+									<span>
+										<label for="dob_m">Month</label>
+										<input type="number" id="dob_m" name="dob_m" required="required" placeholder="Month" maxlength="2" min="1" max="12" >
+									</span>
+									<span>
+										<label for="dob_d">Day</label>
+										<input type="number" id="dob_d" name="dob_d" required="required" placeholder="Day" maxlength="2" min="1" max="31">
+									</span>
+									<span>
+										<label for="dob_y">Year(4 digit)</label>
+										<input type="number" id="dob_y" name="dob_y" required="required" placeholder="Year" maxlength="4" min="2010" max="2017">
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="street">Street</label></th>
+								<td><input type="text" required="required" name="street" id="street" placeholder="Enter street" pattern="[^0-9]*$" title="It must not have number"></td>
+								<th><label for="city">City</label></th>
+								<td><input type="text" required="required" name="city" id="city" placeholder="Enter city" pattern="[^0-9]*$" title="It must not have number"></td>
+							</tr>
+							<tr>
+								<th><label for="zipCode">Zip Code</label></th>
+								<td><input type="text" required="required" name="zipCode" id="zipCode" placeholder="Enter zip code" pattern="[0-9]{4}-[0-9]{4}" title="The format is xxxx-xxxx"></td>
+								<th><label for="s_email">Student E-mail</label></th>
+								<td><input type="email" required="required" name="s_email" id="s_email" placeholder="Enter student email"></td>
+							</tr>
+							<tr>
+								<th>Primary Phone</th>
+								<td>
+									<input type="checkbox" name="p_phone" id="p_phone_01" value="cell" checked="checked">
+									<label for="p_phone_01">Cell</label>
+									<input type="checkbox" name="p_phone" id="p_phone_02" value="home">
+									<label for="p_phone_02">Home</label></td>
+								<th>Secondary Phone</th>
+								<td>
+									<input type="checkbox" name="s_phone" id="s_phone_01" value="cell" checked="checked">
+									<label for="s_phone_01">Cell</label>
+									<input type="checkbox" name="s_phone" id="s_phone_02" value="home">
+									<label for="s_phone_02">Home</label></td>
+							</tr>
+							<tr>
+								<th><label for="lessonDay">Lesson Day</label></th>
+								<td><input type="text" name="lessonDay" id="lessonDay" placeholder="Enter Lesson Day" required="required"></td>
+								<th><label for="lessonTime">Lesson Time</label></th>
+								<td><input type="time" name="lessonTime" id="lessonTime" placeholder="Enter Lesson Time" required="required"></td>
+							</tr>
+							<tr>
+								<th>Country</th>
+								<td>
+									<select name="country" id="country" required="required">
+										<optgroup label="Asia">
+											<option value="china">China</option>
+											<option value="japan">Japan</option>
+											<option value="skorea" selected="selected">South Korea</option>
+											<option value="india">India</option>
+										</optgroup>
+										<optgroup label="Oceania">
+											<option value="newzealand">New Zealand</option>
+											<option value="australia">Australia</option>
+											<option value="fiji">Fiji</option>
+										</optgroup>
+									</select>
+								</td>
+								<th><label for="phone_01">Phone</label></th>
+								<td>(+<input type="text" name="phone_01" id="phone_01" required="required" placeholder="2 digits" maxlength="2" pattern="[0-9]{2}" title="Put 2 digits number" >) <input type="text" name="phone_02" id="phone_02" required="required" placeholder="2 digits" maxlength="2" pattern="[0-9]{2}" title="Put 2 digits number">-<input type="text" name="phone_03" id="phone_03" required="required" placeholder="6 digits" maxlength="6" pattern="[0-9]{6}" title="Put 6 digits number"></td>
+							</tr>
+							<tr>
+								<th>Gender</th>
+								<td>
+									<select name="gender" id="gender" required="required">
+										<option value="female">Female</option>
+										<option value="male">Male</option>
+										<option value="trans">Trans</option>
+										<option value="pntd">Prefer not to disclose</option>
+									</select>
+								</td>
+								<th>Starting Session</th>
+								<td>
+									<span><input type="radio" name="starting_session" id="ss_01" checked="checked" value="spring"><label for="ss_01">Spring 2017</label></span>
+									<span><input type="radio" name="starting_session" id="ss_02" value="summer"><label for="ss_02">Summer 2017</label></span>
+									<span><input type="radio" name="starting_session" id="ss_03" value="autumn"><label for="ss_03">Autumn 2017</label></span>
+									<span><input type="radio" name="starting_session" id="ss_04" value="winter"><label for="ss_04">Winter 2017</label></span>
+								</td>
+							</tr>
+							<tr>
+								<th><label for="comments">Comments Questions</label></th>
+								<td colspan="3"><textarea name="comments" id="comments" cols="20" rows="10" required="required" placeholder="Enter comments here" maxlength="200"></textarea></td>
+							</tr>
+							<tr>
+								<td colspan="4" class="center">
+									<button type="submit" value="Submit">Submit</button>
+									<button type="reset" value="Clear this form">Clear this form</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
