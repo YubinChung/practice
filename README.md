@@ -3,20 +3,21 @@ This is for practice code.
 
 ## practice/HTML_CSS
 
-- parallax effect : Single simple page using parallax effect practise
+- parallax effect : Single simple page using parallax effect practise.
 
 ## practice/Javascript
 
 - switch_bloodType.html : Get blood type data of users through prompt and outputting blood type using switch loop.
+- Simple CRUD : Javascript simple CRUD with bootstrap and font awesome to exercise seperate js files by functions.
 
 ## practice/Laravel
 
-- Laravel_vue : Laravel + vue.js
-- Todo : Simple CRUD using Laravel
+- Laravel_vue : Laravel + vue.js.
+- Todo : Simple CRUD using Laravel.
 
 ## practice/PHP
 
-- Fruits table : User DB register and login / Simple CRUD table
+- Fruits table : User DB register and login / Simple CRUD table.
 - Getting data from users : Get data from users through POST method form and make output using array and foreach loop.
 - registration : Music Lesson Registration / Get data from diverse input types.
 - css : CSS common file of each folder(Getting data from users, registration, Fruits table).
