@@ -1,5 +1,10 @@
 # practice
-This is for practice code.
+Hi, there :)
+This is the INDEX of my code exercise folder 'practice'.
+I am trying to commit everyday exercise code. If there are anything to fix or add, just let me know.
+
+Have a wonderful day :P
+
 
 ## practice/HTML_CSS
 
