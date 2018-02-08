@@ -8,6 +8,7 @@ Have a wonderful day :P
 
 ## practice/HTML_CSS
 
+- css3_rotate Square Animation.html : This is rotating square made by CSS3 rotate3d, transform, Animation keyframes
 - parallax effect : Single simple page using parallax effect practise.
 
 ## practice/Javascript
