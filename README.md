@@ -14,6 +14,7 @@ Have a wonderful day :P
 ## practice/Javascript
 
 - Simple CRUD : Javascript simple CRUD with bootstrap and font awesome to exercise seperate js files by functions.
+- js_orderform : Data structure exercise. Order form featured javascript prototype.
 - switch_bloodType.html : Get blood type data of users through prompt and outputting blood type using switch loop.
 - todolist_ajax : The simple todo list with ajax.
 
