@@ -13,8 +13,9 @@ Have a wonderful day :P
 
 ## practice/Javascript
 
-- switch_bloodType.html : Get blood type data of users through prompt and outputting blood type using switch loop.
 - Simple CRUD : Javascript simple CRUD with bootstrap and font awesome to exercise seperate js files by functions.
+- switch_bloodType.html : Get blood type data of users through prompt and outputting blood type using switch loop.
+- todolist_ajax : The simple todo list with ajax.
 
 ## practice/Laravel
 
