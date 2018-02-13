@@ -17,6 +17,7 @@ Have a wonderful day :P
 - js_orderform : Data structure exercise. Order form featured javascript prototype.
 - switch_bloodType.html : Get blood type data of users through prompt and outputting blood type using switch loop.
 - todolist-ajax : The simple todo list with ajax.
+- array_test.html : array test
 
 ## practice/Laravel
 
