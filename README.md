@@ -15,9 +15,10 @@ Have a wonderful day :P
 
 - Simple CRUD : Javascript simple CRUD with bootstrap and font awesome to exercise seperate js files by functions.
 - js_orderform : Data structure exercise. Order form featured javascript prototype.
-- switch_bloodType.html : Get blood type data of users through prompt and outputting blood type using switch loop.
 - todolist-ajax : The simple todo list with ajax.
+- switch_bloodType.html : Get blood type data of users through prompt and outputting blood type using switch loop.
 - array_test.html : array test
+- check_even_odd_inArray.html	: Check even and odd in array fot exercise javascript
 
 ## practice/Laravel
 
