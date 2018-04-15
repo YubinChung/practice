@@ -3,8 +3,9 @@ var todos = {
 		// Press Enter 
 		if (e.charCode == 13){
 			var todoContents = $('#InputTodo').val();
-			var sendingJson = { 'name' : todoContents};
-			
+			var itemNum = ($('#todoList li').length )+ 1;
+			var sendingJson = { 'idtodo': itemNum, 'name' : todoContents};
+			console.log(sendingJson)
 			// if value is nothing or null 
 			if ( todoContents !== '' || todoContents !== null){
 			
@@ -17,7 +18,7 @@ var todos = {
 			*/
 
 
-			$.post("http://139.59.230.182:3002/tasks", sendingJson).done(function(response){
+			$.post("http://localhost:3002/users", sendingJson).done(function(response){
 					/* 
 						.done(function(response)) 
 						always exist response parameter in .done()
@@ -27,7 +28,7 @@ var todos = {
 					// console.log(response);
 					
 					// to append data received
-					$('#todoList').append('<li data-listitem="' + response._id + '"><span class="todolist--button-del"><i class="fa fa-trash-o"></i></span><p class="list_contents">'+ sendingJson['name'] +'</p></li>');
+					$('#todoList').append('<li data-listitem="' + sendingJson['idtodo'] + '"><span class="todolist--button-del"><i class="fa fa-trash-o"></i></span><span class="list_contents">'+ sendingJson['name'] +'</span></li>');
 					
 					// input value delete
 					todos.reset();
@@ -47,7 +48,7 @@ var todos = {
 	delete: function(){
 
 		var dataId = $(this).closest('li').attr('data-listitem');
-		var dataSendingUrl = "http://139.59.230.182:3002/tasks/" + dataId + "";
+		var dataSendingUrl = "http://localhost:3002/users" + dataId + "";
 
 		$.ajax({
 			url : dataSendingUrl,
@@ -67,12 +68,12 @@ var todos = {
 		$('.container').on('click','.btn_toggle', todos.toggle);
 		$('.container').on('click','.list_contents', todos.update);
 
-		$.get("http://139.59.230.182:3002/tasks").done(function(response){
+		$.get("http://localhost:3002/users").done(function(response){
 			var todoList = $('#todoList');
 			var list = response;
 
 			for(var items in list){
-				todoList.append('<li data-listitem="'+ list[items]._id + '"><span class="todolist--button-del"><i class="fa fa-trash-o"></i></span><span class="list_contents">'+ list[items].name +'</span></li>')
+				todoList.append('<li data-listitem="'+ list[items].idtodo + '"><span class="todolist--button-del"><i class="fa fa-trash-o"></i></span><span class="list_contents">'+ list[items].name +'</span></li>')
 			}
 		});
 	},
