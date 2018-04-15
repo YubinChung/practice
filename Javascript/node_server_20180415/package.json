@@ -1,0 +1,35 @@
+{
+  "name": "nodesjs",
+  "version": "1.0.0",
+  "description": "'This is for node express server test'",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel server --out-dir build --presets=es2015 && webpack",
+    "start": "nodemon app.js --exec babel-node --presets babel-preset-env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YubinChung/nodesjs.git"
+  },
+  "author": "Yu Bin Chung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YubinChung/nodesjs/issues"
+  },
+  "homepage": "https://github.com/YubinChung/nodesjs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.17.3",
+    "standard": "^11.0.1"
+  }
+}
