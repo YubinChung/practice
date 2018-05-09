@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+	<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+	class Cbox extends React.Component {
+		constructor(props) {
+				super()
+				this.clickCheck = this.clickCheck.bind(this)
+				// 상태 초기화
+				this.state = {checked : false}
+			}
+		clickCheck(e){
+			const newValue = !this.state.checked
+			this.setState({checked : newValue})
+		}
+		render() {
+			// label
+			let label = this.props.label
+			let mark = '☐'
+			let bstyle = {fontWeight : 'normal'}
+
+			if (this.state.checked) {
+				mark = '✔︎'
+				bstyle = {fontWeight : 'bold'}
+			}
+
+			return (
+			  <div onClick={this.clickCheck} style={bstyle}>
+					{mark} {label}
+				</div>
+			)
+		}
+}
+	const dom = <div>
+			<Cbox label="cherry 1" />
+			<Cbox label="cherry 2" />
+			<Cbox label="cherry 3" />
+			<Cbox label="cherry 4" />
+		</div>
+	ReactDOM.render(dom, document.getElementById('root') )
+	</script>
+</body>
+
+</html>

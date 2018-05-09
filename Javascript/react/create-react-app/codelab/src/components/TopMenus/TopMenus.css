@@ -1,0 +1,12 @@
+.header{
+    background-color:#333;  
+}
+.item {
+    text-align: center;
+    padding: 10px 20px;
+    display: inline-block;
+    color:white;text-decoration: none;font-size:13px
+}
+.item:hover,.item.active{
+    background:#555;
+}

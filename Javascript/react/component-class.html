@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+	<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+	// class 정의
+	class PhotoText extends React.Component{
+		getImageUrl() {
+			const id = this.props.src
+			const url = 'img/' + id + '.jpg'
+			return url;
+		}
+
+		render() {
+			const label = this.props.text
+			const url = this.getImageUrl()
+			const boxStyle = {
+				fontSize :'1rem',
+				border: '1px solid silver',
+				padding: '10px',
+				margin: '10px'
+			}
+			return (<div style={boxStyle}>
+				<img src={url} />
+				<h1>{label}</h1>
+			</div>)
+		}
+	}
+
+
+	// 컴포넌트 사용
+	const dom = <div>
+		<PhotoText src="image1" text="Image 1 Label" />
+		<PhotoText src="image2" text="Image 2 Label" />
+		<PhotoText src="image3" text="Image 3 Label" />
+	</div>
+
+	// reactDOM 에 render
+	ReactDOM.render(dom, document.getElementById('root'))
+	</script>
+</body>
+
+</html>
